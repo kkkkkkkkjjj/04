@@ -2,18 +2,23 @@
 #include <stdlib.h>
 
 int main() {
-    int a, b, c, d;
+    unsigned int x;
+    int b;
 
-    printf("input the second: \n");
-    scanf("%d", &a);
+    printf("input a number : \n");
+    scanf("%ui",&x);
 
-
-    b = a / 3600;    
-    a %= 3600;            
-    c = a / 60;     
-    d = a % 60;     
-
-    printf("The time for %d second is %02d : %02d : %02d\n", a, b, c, d);
+    for (b=0; x != 0; x>>= 1)
+    {
+        if (x & 1)
+         {
+            b++;
+         }
+    }
+    printf("The result is : %i\n", b);
 
     return 0;
+
 }
+    
+
