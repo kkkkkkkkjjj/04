@@ -1,17 +1,24 @@
 #include <stdio.h>
- #include <stdlib.h>
+#include <stdlib.h>
 
- int main (int argc, char *argv[]){
-     int x, y, z, m;
-     int a, b, c;
-     x=2;
-     z=1;
-     a=3;
-     b=4;
-     c=5;
+int main(){
+    int a,b;
 
-     y= a*x*x + b*x + c;
-     m= (x+y+z)/3;
+    printf("put two numbers:\n");
+    scanf("%i %i", &a, &b);
 
-     printf("y=%d,m=%d",y,m);
- }
+    int addition = a +b;
+    int subtraction = a-b;
+    int multiplication = a *b;
+    int division = a/b;
+    int modulus = a%b;
+
+
+    printf("result: %i + %i = %i\n", a,b, addition);
+    printf("result: %i - %i = %i\n", a, b,subtraction);
+    printf("result: %i * %i = %i\n", a, b, multiplication);
+    printf("result: %i / %i = %i\n", a, b, division);
+    printf("result: %i %% %i = %i\n", a, b, modulus);
+
+     return 0;
+}
