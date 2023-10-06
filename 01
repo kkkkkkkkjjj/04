@@ -2,23 +2,15 @@
 #include <stdlib.h>
 
 int main(){
-    int a,b;
+    int a, b, c;
 
-    printf("put two numbers:\n");
-    scanf("%i %i", &a, &b);
+    printf("input the second :\n");
+    scanf("%d", &a);
 
-    int addition = a +b;
-    int subtraction = a-b;
-    int multiplication = a *b;
-    int division = a/b;
-    int modulus = a%b;
+    b = a / 60;
+    c = a % 60;
 
+    printf("the time is %d:%d\n", b, c);
 
-    printf("result: %i + %i = %i\n", a,b, addition);
-    printf("result: %i - %i = %i\n", a, b,subtraction);
-    printf("result: %i * %i = %i\n", a, b, multiplication);
-    printf("result: %i / %i = %i\n", a, b, division);
-    printf("result: %i %% %i = %i\n", a, b, modulus);
-
-     return 0;
+    return 0;
 }
